@@ -1,9 +1,25 @@
+const goals = [
+  {
+    title: 'Learn React',
+    description: 'In-Death',
+  },
+  {
+    title: 'Learn React Feature',
+    description: 'Hooks, etc....',
+  },
+  {
+    title: 'React Environment Setup',
+    description: 'Be able to setup dev environment.....',
+  },
+];
+
+
 //Modify component to make it dynamic. Hint: use props
-export function CourseGoal() {
+export function CourseGoal(props) {
   return (
     <li>
-      <h2>TITLE</h2>
-      <p>DESCRIPTION</p>
+      <h2>{props.title}</h2>
+      <h2>{props.description}</h2>
     </li>
   );
 }
@@ -16,6 +32,9 @@ function App() {
       <ul>
         {/* OUTPUT AT LEAST TWO CourseGoal components here */}
         {/* One of them should have a title of “Learn React” and a description of “In-depth” */}
+      <CourseGoal title={goals[0].title} description={goals[0].description}></CourseGoal>
+      <CourseGoal title={goals[1].title} description={goals[1].description}/>
+      <CourseGoal title={goals[2].title} description={goals[2].description}/> 
       </ul>
     </div>
   );

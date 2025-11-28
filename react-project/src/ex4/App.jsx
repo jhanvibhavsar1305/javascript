@@ -11,6 +11,14 @@ export const user = {
 
 // This exercise is just about practicing event handling
 function App() {
+
+  function onclickHandle() {
+    user.email = 'email@email.com';
+    user.password= '12345';
+    user.loggedIn = true;
+    console.log(user);
+  }
+
   return (
     <div id="app">
       <h1>User Login</h1>
@@ -27,7 +35,7 @@ function App() {
       </p>
 
       <p id="actions">
-        <button>Login</button>
+        <button onclick = {onclickHandle}>Login</button>
       </p>
     </div>
   );
